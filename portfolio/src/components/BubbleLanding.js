@@ -228,6 +228,7 @@ const BubbleLanding = () => {
       <div className="welcome-text">
         <div className="welcome-text-top">Welcome to the homepage of</div>
         <div className="welcome-text-bottom">MENASH FAREED</div>
+        <div>{`[BETA]`}</div>
       </div>
       {bubbles.map((bubble, index) => (
         <div
