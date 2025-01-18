@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Contact = () => {
+const Skills = () => {
   return <div>In Progress</div>;
 };
 
-export default Contact;
+export default Skills;

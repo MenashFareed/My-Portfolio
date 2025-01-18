@@ -1,25 +1,23 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
 import About from './components/About';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
+import BubbleLanding from './components/BubbleLanding';
 
 const App = () => {
   return (
     <Router>
-      {/* <Navbar /> */}
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/about" element={<About />} />
-        {/* <Route path="/projects" element={<Projects />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/My-Portfolio/" element={<BubbleLanding />} />
+        <Route path="/My-Portfolio/about" element={<About />} />
+        <Route path="/My-Portfolio/skills" element={<Skills />} />
+        <Route path="/My-Portfolio/projects" element={<Projects />} />
+        <Route path="/My-Portfolio/experience" element={<Experience />} />
+        <Route path="/My-Portfolio/contact" element={<Contact />} />
       </Routes>
-      {/* <Footer /> */}
     </Router>
   );
 };
