@@ -11,15 +11,15 @@ import Footer from './components/Footer';
 const App = () => {
   return (
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
+        {/* <Route path="/projects" element={<Projects />} />
         <Route path="/experience" element={<Experience />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} /> */}
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 };
