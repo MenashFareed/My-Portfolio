@@ -1,31 +1,84 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./About.css";
 
 const About = () => {
   return (
-    <div className="about-container bg-gray-100 py-10 px-6">
-      <div className="max-w-4xl mx-auto text-center">
+    <div className="about-container">
+      <Link to="/My-Portfolio/" className="back-button">
+        ← Back
+      </Link>
+      
+      {/* Header Section 
+      <div className="about-header">
+        <div className="header-text">
+          <div className="header-subtitle">Get to know</div>
+          <div className="header-title">MENASH FAREED</div>
+        </div>
+      </div>
+*/}
+      {/* Main Content */}
+      <div className="about-content">
         {/* Profile Section */}
-        <div className="profile-section mb-8">
+        <div className="profile-section neon-box">
           <img
-            src="https://via.placeholder.com/150"
+            src="your-image-url-here.jpg"
             alt="Profile"
-            className="w-40 h-40 rounded-full mx-auto border-4 border-gray-300 shadow-lg"
+            className="profile-image"
           />
-          <h1 className="text-3xl font-bold mt-4 text-gray-800">Menash Fareed</h1>
-          <p className="text-gray-600 mt-2">
-            Software Engineer | Web Developer | Cybersecurity Enthusiast
+          <div className="profile-title">Software Engineer</div>
+          <div className="profile-subtitle">
+            Software Engineer | Full Stack Developer | Cybersecurity Enthusiast
+          </div>
+        </div>
+
+        {/* Bio Section */}
+        <div className="bio-section neon-box">
+          <h2 className="section-title">About Me</h2>
+          <p className="bio-text">
+            Hi! I'm Menash, an enthusiastic software engineer with a drive for
+            crafting intuitive web applications and solving complex challenges.
+            With a strong foundation in both front-end and back-end development,
+            I specialize in creating, scaling, and maintaining seamless, user-centric 
+            experiences while maintaining robust security practices.
+          </p>
+          <p className="bio-text">
+            I obtained my Bachelor's degree in Software Engineering from the 
+            University of Western Ontario, Canada. In addition, I had completed
+            a co-op along with a standing on the honour roll. 
+          </p>
+          <p className="bio-text">
+            My journey in technology started in my first year of university, where I 
+            was introduced to the world of software development. After passing my first 
+            CS course I knew that this was the engineering field I wanted to pursue.
+          </p>
+          <p className="bio-text">
+            Aside from the techincal life, I am a huge sports fan. I'd play anything from
+            fencing to soccer to volleyball.
+          </p>
+          <p className="bio-text">
+            Favorite sports teams:
           </p>
         </div>
 
-        {/* Introduction Section */}
-        <div className="introduction-section mb-8">
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Hi! I'm Menash, a passionate software engineer with a drive for crafting 
-            intuitive web applications and solving complex challenges. 
-          </p>
+        {/* Quick Facts */}
+        <div className="facts-section neon-box">
+          <h2 className="section-title">Quick Facts</h2>
+          <div className="facts-grid">
+            <div className="fact-item">
+              <span className="fact-number">3+</span>
+              <span className="fact-label">Years Experience</span>
+            </div>
+            <div className="fact-item">
+              <span className="fact-number">20+</span>
+              <span className="fact-label">Projects Completed</span>
+            </div>
+            <div className="fact-item">
+              <span className="fact-number">15+</span>
+              <span className="fact-label">Technologies</span>
+            </div>
+          </div>
         </div>
-
-
       </div>
     </div>
   );
