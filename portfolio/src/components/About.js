@@ -16,7 +16,6 @@ const About = () => {
           <div className="header-title">MENASH FAREED</div>
         </div>
       </div>
-*/}
       {/* Main Content */}
       <div className="about-content">
         {/* Profile Section */}
@@ -26,7 +25,7 @@ const About = () => {
             alt="Profile"
             className="profile-image"
           />
-          <div className="profile-title">Software Engineer</div>
+          <div className="profile-title">Menash Fareed</div>
           <div className="profile-subtitle">
             Software Engineer | Full Stack Developer | Cybersecurity Enthusiast
           </div>
