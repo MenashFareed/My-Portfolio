@@ -7,7 +7,7 @@ const Skills = () => {
     {
       title: "Languages",
       color: "#FF0080", // Neon Pink
-      skills: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "SASS/SCSS"]
+      skills: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "Python", "C#", "PHP", "SQL"]
     },
     {
       title: "Frameworks",
@@ -17,7 +17,7 @@ const Skills = () => {
     {
       title: "Software/Applications",
       color: "#FFE100", // Yellow
-      skills: ["GitHub", "Docker", "Vercel", "Netlify", "Webpack", "Vite", "Firebase", "AWS Amplify"]
+      skills: ["GitHub", "Docker", "Vercel", "Netlify", "Webpack", "Vite", "Firebase", "AWS Amplify", "Azure", "GCP", "Legacy Software"]
     },
     {
       title: "APIs & Tools",
@@ -27,7 +27,7 @@ const Skills = () => {
     {
       title: "Data Visualization",
       color: "#8000FF", // Purple
-      skills: ["React ApexCharts", "D3.js", "Chart.js", "Highcharts"]
+      skills: ["React ApexCharts", "D3.js", "Chart.js", "Highcharts", "Power BI", "Tableau"]
     }
   ];
 
