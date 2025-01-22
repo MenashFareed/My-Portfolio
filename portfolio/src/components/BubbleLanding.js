@@ -45,6 +45,28 @@ const BubbleLanding = () => {
         dx: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1), 
         dy: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1)
     },
+    { 
+      id: 6, 
+      text: 'YouTube', 
+      path: 'https://www.youtube.com/watch?v=C7wCUvkP8Ac', 
+      dx: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1), 
+      dy: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1)
+    },
+    { 
+      id: 7, 
+      text: 'GitHub', 
+      path: 'https://github.com/MenashFareed', 
+      dx: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1), 
+      dy: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1)
+    },
+    { 
+      id: 8, 
+      text: 'RR', 
+      path: 'https://www.youtube.com/watch?v=Aq5WXmQQooo', 
+      dx: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1), 
+      dy: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1)
+    },
+   
   ];
 
   useEffect(() => {
@@ -219,7 +241,14 @@ const BubbleLanding = () => {
     setSelectedBubble(bubble);
     
     setTimeout(() => {
-      navigate(bubble.path);
+      // Check if the path is an external URL
+      if (bubble.path.startsWith('http')) {
+        window.open(bubble.path, '_blank'); // Opens in new tab
+        setPoppingBubbles(false); // Reset the popping state
+        setSelectedBubble(null);
+      } else {
+        navigate(bubble.path); // Internal navigation
+      }
     }, 1500);
   };
 

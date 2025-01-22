@@ -7,7 +7,7 @@ const Skills = () => {
     {
       title: "Languages",
       color: "#FF0080", // Neon Pink
-      skills: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "Python", "C#", "PHP", "SQL"]
+      skills: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "Python", "C#", "PHP", "SQL", "Java", "Rust", "Go"]
     },
     {
       title: "Frameworks",
