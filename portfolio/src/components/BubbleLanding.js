@@ -34,7 +34,7 @@ const BubbleLanding = () => {
     { 
       id: 4, 
       text: 'Contact', 
-      path: '/My-Portfolio/contact', 
+      path: 'https://forms.gle/apHiUzUVZMNCDJYz7', 
       dx: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1), 
       dy: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1)
     },
@@ -61,6 +61,13 @@ const BubbleLanding = () => {
     },
     { 
       id: 8, 
+      text: 'LinkedIn', 
+      path: 'https://www.linkedin.com/in/menashf/', 
+      dx: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1), 
+      dy: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1)
+    },
+    { 
+      id: 9, 
       text: 'RR', 
       path: 'https://www.youtube.com/watch?v=Aq5WXmQQooo', 
       dx: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1), 
