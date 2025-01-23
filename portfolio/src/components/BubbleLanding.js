@@ -8,6 +8,7 @@ const BubbleLanding = () => {
   const [selectedBubble, setSelectedBubble] = useState(null);
   const bubbleRefs = useRef([]);
   const animationFrameRef = useRef();
+  const [timer, setTimer] = useState({ hours: 0, minutes: 0, seconds: 0, milliseconds: 0 });
   
   const bubbles = [
     { 
@@ -242,6 +243,39 @@ const BubbleLanding = () => {
     };
   }, [poppingBubbles]);
 
+  useEffect(() => {
+    const startTime = localStorage.getItem('bubbleStartTime') || Date.now().toString();
+    if (!localStorage.getItem('bubbleStartTime')) {
+      localStorage.setItem('bubbleStartTime', startTime);
+    }
+
+    const updateTimer = () => {
+      const start = parseInt(startTime);
+      const now = Date.now();
+      const diff = now - start;
+
+      const hours = Math.floor(diff / 3600000);
+      const minutes = Math.floor((diff % 3600000) / 60000);
+      const seconds = Math.floor((diff % 60000) / 1000);
+      const milliseconds = Math.floor((diff % 1000) / 10); // Get 2 digits of milliseconds
+
+      setTimer({ hours, minutes, seconds, milliseconds });
+    };
+
+    // Update more frequently for smooth milliseconds
+    const timerInterval = setInterval(updateTimer, 10);
+
+    return () => clearInterval(timerInterval);
+  }, []);
+
+  const formatTimer = () => {
+    let timerText = '';
+    if (timer.hours > 0) timerText += `${timer.hours}h `;
+    if (timer.minutes > 0) timerText += `${timer.minutes}m `;
+    timerText += `${timer.seconds}.${timer.milliseconds.toString().padStart(2, '0')}s`;
+    return timerText;
+  };
+
   const handleBubbleClick = (bubble) => {
     if (poppingBubbles) return;
     setPoppingBubbles(true);
@@ -277,6 +311,11 @@ const BubbleLanding = () => {
           <span className="bubble-text">{bubble.text}</span>
         </div>
       ))}
+      <div className="bubble-timer">
+        <p>
+          The Bubbles Have Had Your Attention For: <span className="timer-digits">{formatTimer()}</span>
+        </p>
+      </div>
     </div>
   );
 };
