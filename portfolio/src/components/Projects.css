@@ -34,16 +34,16 @@
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 2rem;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .card {
   position: relative;
-  min-height: 500px;
+  min-height: 550px;
   height: auto;
   perspective: 1500px;
   cursor: pointer;
@@ -75,20 +75,24 @@
     inset 0 0 20px rgba(var(--card-color), 0.05);
 }
 
-.card-image {
+.card-media {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 300px;
   overflow: hidden;
+  border-radius: 12px 12px 0 0;
 }
 
-.card-image img {
+.project-video,
+.card-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #000;
   transition: transform 0.5s ease;
 }
 
+.video-overlay,
 .image-overlay {
   position: absolute;
   top: 0;
@@ -97,9 +101,40 @@
   height: 100%;
   background: linear-gradient(
     to bottom,
-    transparent,
-    rgba(10, 10, 10, 0.8)
+    transparent 0%,
+    rgba(10, 10, 10, 0.4) 50%,
+    rgba(10, 10, 10, 0.8) 100%
   );
+  pointer-events: none;
+}
+
+.card:hover .project-video,
+.card:hover .card-media img {
+  transform: scale(1.05);
+}
+
+/* Ensure videos maintain aspect ratio */
+.project-video {
+  object-fit: cover;
+}
+
+/* Optional: Add a play indicator */
+.card-media::after {
+  content: '▶';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  opacity: 0.8;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card-media::after {
+  opacity: 0;
 }
 
 .card-content {
@@ -194,6 +229,12 @@
   opacity: 0.1;
 }
 
+@media (max-width: 1200px) {
+  .card-media {
+    height: 250px;
+  }
+}
+
 @media (max-width: 768px) {
   .cards-container {
     grid-template-columns: 1fr;
@@ -203,4 +244,22 @@
   .header-title {
     font-size: 3rem;
   }
+
+  .card-media {
+    height: 200px;
+  }
+}
+
+.project-link {
+  display: inline-block;
+  color: var(--card-color);
+  text-decoration: none;
+  margin-left: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  text-shadow: 0 0 8px var(--card-color);
+  transform: translateX(2px);
 } 
