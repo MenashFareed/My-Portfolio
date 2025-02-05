@@ -21,9 +21,10 @@ const About = () => {
         {/* Profile Section */}
         <div className="profile-section neon-box">
           <img
-            src="your-image-url-here.jpg"
+            src={process.env.PUBLIC_URL + "/media/pp.jpg"}
             alt="Profile"
             className="profile-image"
+
           />
           <div className="profile-title">Menash Fareed</div>
           <div className="profile-subtitle">
@@ -56,7 +57,6 @@ const About = () => {
             fencing to soccer to volleyball.
           </p>
           <p className="bio-text">
-            Favorite sports teams:
           </p>
         </div>
 
