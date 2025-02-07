@@ -81,6 +81,13 @@ const BubbleLanding = () => {
       dx: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1), 
       dy: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1)
     },
+    { 
+      id: 10, 
+      text: 'Resume', 
+      path: 'https://docs.google.com/document/d/1dAu0D_vOGouAiMj24tB2MaaJkAXs9OfY/edit?usp=sharing&ouid=100200551537095387345&rtpof=true&sd=true', 
+      dx: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1), 
+      dy: Math.random() * 3 + 1 * (Math.random() < 0.5 ? -1 : 1)
+    },
    
   ];
 
