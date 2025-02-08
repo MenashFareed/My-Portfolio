@@ -69,12 +69,12 @@ const About = () => {
               <span className="fact-label">Years Experience</span>
             </div>
             <div className="fact-item">
-              <span className="fact-number">20+</span>
+              <span className="fact-number">15+</span>
               <span className="fact-label">Projects Completed</span>
             </div>
             <div className="fact-item">
               <span className="fact-number">15+</span>
-              <span className="fact-label">Technologies</span>
+              <span className="fact-label">Technologies & Languages</span>
             </div>
           </div>
         </div>
