@@ -7,14 +7,30 @@ const Experience = () => {
 
   const experiences = [
     {
-      year: "2024 - Present",
+      year: "2025 - Present",
+      title: "Senior Data Analyst",
+      company: "BSP Life, Suva, Fiji",
+      description: `Establishing the foundation of data processing for the data analytics department. Alongside 
+      providing impactful insights into historic data within other departments. Designing and creating Business 
+      Intelligence pieces aimed at hitting goal of $20M in annual sales`,
+      technologies: ["Databricks", "Python", "Oracle", "Power BI", "MSSQL"],
+      color: "#00FF80", // Neon Green
+    },
+    {
+      year: "2024 - 2025",
       title: "Software Developer",
       company: "The Digital Group, Princeton, USA",
       description: `Designs and implements scalable, client-focused software solutions by analyzing business needs, optimizing
       workflows, and integrating cutting-edge technologies. Designs and implements software applications, 
       increasing system efficiency by 25% and contributing to
       projects that generate $500K+ in annual revenue.`,
-      technologies: ["React", "Node.js", "ASP.NET", "Azure", "Client Management"],
+      technologies: [
+        "React",
+        "Node.js",
+        "ASP.NET",
+        "Azure",
+        "Client Management",
+      ],
       color: "#FF0080", // Neon Pink
     },
     {
@@ -42,7 +58,7 @@ const Experience = () => {
       description: `Built and optimized software systems, delivering solutions that reduce processing time and support seamless
       operations. Cross-collaborated with our own law firm to understand clients demands and integrate requirements.`,
       technologies: ["Angular", "Scala", "API Integration", "Github"],
-      color: "#00FF80", // Neon Green
+      color: "#A0AEC0", // Tailwind's 'gray-400'
     },
   ];
 

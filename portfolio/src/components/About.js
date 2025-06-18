@@ -28,7 +28,7 @@ const About = () => {
           />
           <div className="profile-title">Menash Fareed</div>
           <div className="profile-subtitle">
-            Software Engineer | Full Stack Developer | Cybersecurity Enthusiast
+            Senior Data Analyst | Full Stack Developer | Cybersecurity Enthusiast
           </div>
         </div>
 
@@ -36,11 +36,10 @@ const About = () => {
         <div className="bio-section neon-box">
           <h2 className="section-title">About Me</h2>
           <p className="bio-text">
-            Hi! I'm Menash, an enthusiastic software engineer with a drive for
-            crafting intuitive web applications and solving complex challenges.
-            With a strong foundation in both front-end and back-end development,
-            I specialize in creating, scaling, and maintaining seamless, user-centric 
-            experiences while maintaining robust security practices.
+            Hi! I'm Menash, a senior data analyst with a background in software engineering. 
+            With a strong foundation in both technical and leadership roles,
+            I specialize in designing, scaling, and maintaining seamless, user-centric databases and 
+            business intelligence dashboards, while maintaining robust security practices.
           </p>
           <p className="bio-text">
             I obtained my Bachelor's degree in Software Engineering from the 
@@ -57,6 +56,8 @@ const About = () => {
             fencing to soccer to volleyball.
           </p>
           <p className="bio-text">
+            I also have an interest towards gaming. Halo, Valorant, and TFT would be my top 3
+            recommendations.
           </p>
         </div>
 
@@ -65,11 +66,11 @@ const About = () => {
           <h2 className="section-title">Quick Facts</h2>
           <div className="facts-grid">
             <div className="fact-item">
-              <span className="fact-number">3+</span>
+              <span className="fact-number">4+</span>
               <span className="fact-label">Years Experience</span>
             </div>
             <div className="fact-item">
-              <span className="fact-number">15+</span>
+              <span className="fact-number">25+</span>
               <span className="fact-label">Projects Completed</span>
             </div>
             <div className="fact-item">
